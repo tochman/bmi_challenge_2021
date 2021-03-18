@@ -5,6 +5,12 @@
   "author": "Thomas <thomas@craftacademy.se>",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^6.7.1"
+    "cypress": "^6.7.1",
+    "superstatic": "^7.1.0"
+  },
+  "scripts": {
+    "start": "superstatic src --port 3000",
+    "cy:open": "cypress open",
+    "cypress": "yarn start & yarn cy:open"
   }
 }
