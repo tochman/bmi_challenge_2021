@@ -18,5 +18,9 @@ describe('User can check their BMI', () => {
     it('is expected to return a BMI value', () => {
       cy.get('div[name=results]').should('contain.text', 'Your BMI value is 28.62')
     });
+
+    it('is expected to display classification message', () => {
+      cy.get('div[name=results]').should('contain.text', 'You are considered Overweight')
+    });
   });
 });
