@@ -4,6 +4,6 @@ const resultsNode = document.getElementById('results')
 button.addEventListener('click', () => {
   const weight = document.body.children.weigth.value
   const height = document.body.children.height.value
-  const bmiValue = bmiCalculator.calculate(weight, height)
-  resultsNode.innerHTML = `Your BMI value is ${bmiValue}`
+  const assessment = bmiCalculator.calculate(weight, height)
+  resultsNode.innerHTML = `Your BMI value is ${assessment.value}. You are considered ${assessment.message}`
 })
